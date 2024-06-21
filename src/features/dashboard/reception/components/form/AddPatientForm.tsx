@@ -29,8 +29,6 @@ const AddPatientForm: React.FC = () => {
     }
   };
 
-  console.log("loading", loading)
-
   return (
     <>
       <Formik
@@ -55,6 +53,11 @@ const AddPatientForm: React.FC = () => {
             <Input
               label="رقم التليفون"
               name="phone"
+              placeholder="e.g.01557551293"
+            />
+            <Input
+              label="عنوان البريد الإلكتروني"
+              name="email"
               placeholder="e.g.01557551293"
             />
             <Input
