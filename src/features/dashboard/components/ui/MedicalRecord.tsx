@@ -178,7 +178,49 @@ const MedicalRecord: React.FC<MedicalRecordProps> = ({
         >
           <Switch>
             <Case condition={radiologies.length > 0}>
-              {/* {radiologies.map((radiology) => "")} */}
+              {radiologies?.map(
+                (radiology: {
+                  id: number;
+                  name: string;
+                  createdAt: string;
+                  result: [];
+                  notes: string;
+                }) => {
+                  return (
+                    <div
+                      key={radiology.id}
+                      className="border border-slate-200 w-full max-w-xs rounded-lg p-2 flex gap-2 flex-col bg-slate-50"
+                    >
+                      <h3 className="text-primary">{radiology.name}</h3>
+                      <div className="border-2 border-dashed border-primary rounded-md p-2 flex flex-wrap flow-row gap-3">
+                        {radiology?.result?.map((result, index) => {
+                          return (
+                            <div
+                              key={index}
+                              className="w-24 h-32 rounded-lg shadow-lg bg-white"
+                            >
+                              <img
+                                className="w-full h-24 rounded-lg"
+                                src={`https://chesthospital-backend.onrender.com/uploads/${result}`}
+                                alt={result}
+                              />
+                              <div className="flex items-center justify-center mt-1">
+                                <PreviewResult
+                                  file={`https://chesthospital-backend.onrender.com/uploads/${result}`}
+                                  modalId={result}
+                                />
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <span className="text-slate-500 text-xs">
+                        {radiology.createdAt}
+                      </span>
+                    </div>
+                  );
+                }
+              )}
             </Case>
             {noDataAvailable}
           </Switch>
