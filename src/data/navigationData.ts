@@ -37,6 +37,8 @@ const labAdminNavLinks = [
 const radiologistNavLinks = [
   { id: 1, href: "/", text: "Radiology Requests" },
   { id: 2, href: "/upload-result", text: "Upload Radiology Result" },
+  { id: 3, href: "/x-ray", text: "x-ray Helper" },
+  { id: 4, href: "/ct-scan", text: "ct-scan Helper" },
 ];
 
 export {
