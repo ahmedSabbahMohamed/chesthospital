@@ -6,7 +6,7 @@ import Logout from "../components/ui/Logout";
 const Doctor: React.FC = () => {
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 container mx-auto">
         <div className="flex-1">
           <Logo />
         </div>
