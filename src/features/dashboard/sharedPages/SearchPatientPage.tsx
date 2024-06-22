@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchPatientForm from "../components/form/SearchPatientForm";
 import { Case, Switch } from "react-if";
 import Loading from "../../../components/ui/Loading";
-import { getErrorWithResponse } from "../../../utils/apiError"
+import { getErrorWithResponse } from "../../../utils/apiError";
 import MedicalRecord from "../components/ui/MedicalRecord";
 import Modal from "../components/ui/Modal";
 import {
