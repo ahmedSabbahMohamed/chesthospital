@@ -43,6 +43,7 @@ const ResultForm: React.FC = () => {
           <Form className="flex flex-col gap-2">
             <Input label="Patient ID:" name="patientId" />
             <Input label="Lab Name:" name="name" />
+            <Input label="Notes:" name="notes" />
             <FileInput name="result" />
             <SubmitBtn BtnTxt="Send Results" disabled={isSubmitting} />
           </Form>
