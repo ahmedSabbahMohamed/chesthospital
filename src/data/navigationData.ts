@@ -34,7 +34,10 @@ const labAdminNavLinks = [
   { id: 2, href: "/upload-result", text: "Upload Lab Result" },
 ];
 
-const radiologistNavLinks = [{ id: 1, href: "/", text: "Radiology Requests" }];
+const radiologistNavLinks = [
+  { id: 1, href: "/", text: "Radiology Requests" },
+  { id: 2, href: "/upload-result", text: "Upload Radiology Result" },
+];
 
 export {
   navLinks,
