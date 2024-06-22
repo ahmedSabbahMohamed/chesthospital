@@ -34,6 +34,7 @@ const FileInput: React.FC<FileInputProps> = ({ name }) => {
     return (
       <>
         <button
+          type="button"
           className="bg-primary w-6 h-6 flex items-center justify-center rounded-full text-white"
           onClick={() =>
             (document.getElementById(modalId) as HTMLDialogElement)?.showModal()
