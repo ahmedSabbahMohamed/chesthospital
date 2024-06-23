@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from './Title';
 import about from "../assets/images/about.png"
-import LearnMoreBtn from './LearnMoreBtn';
+// import LearnMoreBtn from './LearnMoreBtn';
 import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
@@ -19,23 +19,20 @@ const About: React.FC = () => {
           </div>
 
           {/* right */}
-          <div className="px-5 text-center lg:text-left">
+          <div className="px-5 text-center">
             <h2 className="text-black text-[46px] font-medium capitalize leading-[70px] mb-8">
-              we take care of your healthy life
+              {t("about_title")}
             </h2>
             <p className="text-black text-opacity-60 text-lg font-normal leading-[27px] mb-[51px]">
-              Welcome to Medilife,Where exceptional medical care <br /> meets
-              compassionate expertise
+              {t("about_desc")}
               <br />
               <br />
-              Welcome to Medilife,Where exceptional medical care meets
-              compassionate expertise
+              {t("about_desc")}
               <br />
-              Welcome to Medilife,Where exceptional medical care meets
-              compassionate expertise
+              {t("about_desc")}
             </p>
 
-            <LearnMoreBtn />
+            {/* <LearnMoreBtn /> */}
           </div>
         </div>
       </div>

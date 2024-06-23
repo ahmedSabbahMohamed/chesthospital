@@ -12,5 +12,13 @@
   "heading": "Your trusted source for medical inshights and expertise!",
   "desc": "Welcome to chest hospital where exceptional medical care meets compassionate expertise.",
   "email": "Email:",
-  "password": "Password:"
+  "password": "Password:",
+  "service_bed_title": "Bed facility",
+  "service_bed_desc": "Welcome to Medilife, Where exceptional medical care meets compassionate expertise",
+  "service_medicine_title": "Medicines",
+  "service_medicine_desc": "Welcome to Medilife, Where exceptional medical care meets compassionate expertise",
+  "service_care_title": "Total Care",
+  "service_care_desc": "Welcome to Medilife, Where exceptional medical care meets compassionate expertise",
+  "about_title": "we take care of your healthy life",
+  "about_desc": "Welcome to Medilife,Where exceptional medical care meets compassionate expertise"
 }

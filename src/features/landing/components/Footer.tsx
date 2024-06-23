@@ -2,6 +2,7 @@ import React from 'react'
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { navLinks } from '../../../data/navigationData';
+import { t } from 'i18next';
 
 const Footer: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
         {navLinks.map((link) => {
           return (
             <a key={link.href} href={link.href} className="link link-hover">
-              {link.text}
+              {t(link.text)}
             </a>
           );
         })}

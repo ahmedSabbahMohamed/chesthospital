@@ -1,11 +1,11 @@
-import React from 'react'
-import Title from './Title';
-import { services } from '../../../data/servicesData';
-import ServiceCard from './ServiceCard';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Title from "./Title";
+import { services } from "../../../data/servicesData";
+import ServiceCard from "./ServiceCard";
 
 const Services: React.FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section>
@@ -18,8 +18,8 @@ const Services: React.FC = () => {
               <ServiceCard
                 key={serv.id}
                 img={serv.icon}
-                title={serv.title}
-                desc={serv.desc}
+                title={t(serv.titleKey)}
+                desc={t(serv.descKey)}
               />
             ))}
           </div>
@@ -27,6 +27,6 @@ const Services: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Services
+export default Services;
