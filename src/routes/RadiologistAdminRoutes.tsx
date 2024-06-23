@@ -4,6 +4,7 @@ import RadiologyRequests from "../features/dashboard/sharedPages/RadiologyReques
 import { useRoutes } from "react-router-dom";
 import NotFoundPage from "../components/ui/NotFoundPage";
 import { UploadRadiologyResult } from "../features/dashboard/radiologist/admin";
+import { CTScan, Xray } from "../features/ai";
 
 const RadiologistAdminRoutes: React.FC = () => {
   const existingPaths = [
@@ -13,6 +14,8 @@ const RadiologistAdminRoutes: React.FC = () => {
       children: [
         { index: true, element: <RadiologyRequests /> },
         { path: "/upload-result", element: <UploadRadiologyResult /> },
+        { path: "/x-ray", element: <Xray /> },
+        { path: "/ct-scan", element: <CTScan /> },
       ],
     },
   ];
