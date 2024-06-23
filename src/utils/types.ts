@@ -10,7 +10,7 @@ type doc = {
   id: number;
   img: string;
   name: string;
-  speciality: string;
+  specialization: string;
 };
 
 type TitleProps = {

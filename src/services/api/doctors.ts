@@ -1,7 +1,7 @@
 import { API } from "."
 
 const getAllDoctors = () => {
-    return API.get("/doctors")
+    return API.get("/api/public/doctors");
 }
 
 export { getAllDoctors }

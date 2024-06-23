@@ -19,9 +19,9 @@ const DoctorCard: React.FC<DoctorCardProps> = ( {img, docName, docSpeciality}) =
 
       <div className="text-center">
         
-        <h3 className=" text-slate-800 font-semibold">{docName}</h3>
+        <h3 className=" text-slate-800 font-semibold text-lg">{docName}</h3>
 
-        <h4 className=" text-primary font-medium">{docSpeciality}</h4>
+        <h4 className=" text-primary font-medium text-md">{docSpeciality}</h4>
       </div>
     </Link>
   );

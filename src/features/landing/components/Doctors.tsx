@@ -5,6 +5,7 @@ import DoctorCard from './DoctorCard'
 import { doc } from '../../../utils/types'
 import Title from './Title'
 import { useTranslation } from 'react-i18next'
+import profile from "../assets/images/profile.png"
 
 const Doctors: React.FC = () => {
   const { isLoading, data } = useDoctorQuery()
@@ -16,12 +17,12 @@ const Doctors: React.FC = () => {
         <div className="container mx-auto">
           <Title firstHalf={t("our")} secondHalf={t("doctors")} />
           <div className="flex flex-row flex-wrap justify-center gap-5">
-            {data?.data.map((doc: doc) => (
+            {data?.data?.data.map((doc: doc) => (
               <DoctorCard
                 key={doc.id}
-                img={doc.img}
+                img={doc.img || profile}
                 docName={doc.name}
-                docSpeciality={doc.speciality}
+                docSpeciality={doc.specialization}
               />
             ))}
           </div>
