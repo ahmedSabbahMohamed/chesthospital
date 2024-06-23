@@ -24,6 +24,12 @@ const CTScan: React.FC = () => {
       setSubmitting(false);
     }
   };
+
+  const responseData = data?.data?.data
+  const mappedData = Object.entries(responseData).map(([key, value]) => {
+    return { key, value };
+  });
+
   return (
     <div>
       <Formik initialValues={{}} onSubmit={handleSubmit}>
@@ -32,7 +38,30 @@ const CTScan: React.FC = () => {
             <Form className="flex flex-col gap-2">
               <FileInput name="image" />
               <SubmitBtn disabled={isSubmitting} BtnTxt="Get Help!" />
-              {data && <div>{data?.data?.data}</div>}
+              {responseData && (
+                <div className="overflow-x-auto px-2">
+                  <table className="table table-xs sm:table-sm md:table-lg bg-white overflow-hidden">
+                    <thead className="bg-dark text-white">
+                      <tr>
+                        <th>ID</th>
+                        <th>Diagnose</th>
+                        <th>Precentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {mappedData.map((result: any, index: number) => {
+                          return (
+                            <tr key={result.key}>
+                              <th>{index + 1}</th>
+                              <td>{result.key}</td>
+                              <td>{result.value}</td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </Form>
           );
         }}
