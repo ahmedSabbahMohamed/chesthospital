@@ -15,6 +15,7 @@ const Xray: React.FC = () => {
   ) => {
     const formData = new FormData();
     formData.append("image", values.image[0]);
+    console.log(formData)
     try {
       await mutateAsync(formData);
     } catch (err) {
@@ -25,8 +26,8 @@ const Xray: React.FC = () => {
     }
   };
 
-  const responseData = data?.data?.data;
-  const mappedData = Object.entries(responseData).map(([key, value]) => {
+  const responseData = data?.data;
+  const mappedData = Object.entries(responseData || {}).map(([key, value]) => {
     return { key, value };
   });
 
@@ -35,7 +36,7 @@ const Xray: React.FC = () => {
       <Formik initialValues={{}} onSubmit={handleSubmit}>
         {({ isSubmitting }) => {
           return (
-            <Form className="flex flex-col gap-2">
+            <Form className="flex flex-col gap-2 items-start justify-center py-5">
               <FileInput name="image" />
               <SubmitBtn disabled={isSubmitting} BtnTxt="Get Help!" />
               {responseData && (

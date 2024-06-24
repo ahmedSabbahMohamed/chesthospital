@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 const CTScan: React.FC = () => {
   const { mutateAsync, data } = useCtScanService();
 
+
   const handleSubmit = async (
     values: any,
     { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
@@ -25,8 +26,8 @@ const CTScan: React.FC = () => {
     }
   };
 
-  const responseData = data?.data?.data
-  const mappedData = Object.entries(responseData).map(([key, value]) => {
+  const responseData = data?.data
+  const mappedData = Object.entries(responseData || {}).map(([key, value]) => {
     return { key, value };
   });
 
