@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_API = `https://2240-197-121-212-143.ngrok-free.app`;
+const BASE_API = `https://9091-2c0f-fc88-6-417e-d540-fd8c-bdfa-e9df.ngrok-free.app`;
 
 const getToken = () => {
   const token = localStorage.getItem("token");

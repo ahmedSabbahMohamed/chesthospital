@@ -3,13 +3,19 @@ import * as SERVICES from "./AIServices";
 
 const useXrayService = () => {
   return useMutation({
-    mutationFn: (req: any) => SERVICES.xrayService(req),
+    mutationFn: SERVICES.xrayService,
+    onSuccess: (data) => {
+      return data?.data;
+    }
   });
 };
 
 const useCtScanService = () => {
   return useMutation({
-    mutationFn: (req: any) => SERVICES.ctScanService(req),
+    mutationFn: SERVICES.ctScanService,
+    onSuccess: (data) => {
+      return data?.data;
+    }
   });
 };
 
